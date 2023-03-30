@@ -14,7 +14,7 @@ print("Hello")
 num1 = int(input("Digite um numero: "))
 num2 = int(input("Digite outro numero: "))
 soma = num1 + num2
-print(f"A soma dos dois é: {soma}" )
+print(f"A soma dos dois é: {soma}")
 
 """# Tipos de variáveis:
 
@@ -42,7 +42,7 @@ type(preco_produto)
 """Variáveis Textuais"""
 
 nome = "Fernando"
-print("Bem vindo " +  nome)
+print("Bem vindo " + nome)
 
 type(nome)
 
@@ -74,11 +74,13 @@ Anatomia de uma função:
 
 """
 
-def multiplicar_numeros(num1, num2):
-  resultado = num1 * num2
-  return resultado
 
-multiplicar_numeros(2,4)
+def multiplicar_numeros(num1, num2):
+    resultado = num1 * num2
+    return resultado
+
+
+multiplicar_numeros(2, 4)
 
 """# Documentar a Função:
 
@@ -87,21 +89,46 @@ multiplicar_numeros(2,4)
 
 """
 
-def multiplicar_numeros(num1, num2):
-  """
-    Função para multiplicar números
 
-  Parâmetros
-    num1: int
-      primeiro número
-    num2: int
-      segundo número
-      
-  Retorna
-    int
-      Resultado multiplicação
-  """
-  resultado = num1 * num2
-  return resultado
+def multiplicar_numeros(num1, num2):
+    """
+      Função para multiplicar números
+
+    Parâmetros
+      num1: int
+        primeiro número
+      num2: int
+        segundo número
+
+    Retorna
+      int
+        Resultado multiplicação
+    """
+    resultado = num1 * num2
+    return resultado
+
 
 multiplicar_numeros(8, 8)
+
+# Calculo IMC
+
+
+def calcular_imc(peso, altura):
+    imc = peso / (altura * altura)
+    peso = int(input("Digite seu peso: "))
+    altura = float(input("Digite sua altura: "))
+    if (imc < 18.5):
+        print("Abaixo do peso")
+    else:
+        if (imc < 24.9):
+            print("Peso normal")
+        elif (imc >= 30):
+            print("Obesidade")
+        else:
+            print(imc)
+            print("Sobrepeso")
+    return imc
+
+
+calcular_imc(82, 1.76)
+calcular_imc(70, 1.70)
